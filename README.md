@@ -1,14 +1,19 @@
-# Read Me Template
-
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Project Name
 
-Muses Florashop - Final Year Project
+Membership Management System with Floral Shop Interface Project
+
+> Company Profile
+
+> Name: Muses
+> Headquarters: Hong Kong
+> Established: Jan 2022
+> Status: Start-up company
 
 ### Table of Contents
 
-You're sections headers will be used to reference location of destination.
+Reference location of destination.
 
 - [Description](#Description)
 - [Aims](#Aims)
@@ -61,4 +66,4 @@ Taabraiz-Akhtar
 SAJJAD
 7413981
 
-[Back To The Top](#read-me-template)
+[Back To The Top](#Project Name)
