@@ -2,6 +2,7 @@ import { getSession } from 'next-auth/react';
 import Product from '../../../../models/Product';
 import db from '../../../../utils/db';
 
+//edit button
 const handler = async (req, res) => {
   const session = await getSession({ req });
   if (!session || !session.user.isAdmin) {
