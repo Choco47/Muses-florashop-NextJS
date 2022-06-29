@@ -4,12 +4,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 Membership Management System with Floral Shop Interface Project
 
-> Company Profile
-
-> Name: Muses
-> Headquarters: Hong Kong
-> Established: Jan 2022
-> Status: Start-up company
+> Company Name: Muses Florashop
 
 ### Table of Contents
 
