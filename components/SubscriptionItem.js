@@ -74,13 +74,13 @@ export default function SubscriptionItem({ subscription }) {
 
   const buttonStyle = () => {
     return subscription.name === 'Standard'
-      ? 'text-purple-700 bg-white rounded opacity-75 hover:opacity-100 hover:shadow-xl transition duration-150 ease-in-out py-4 mt-4'
-      : 'text-purple-700 border border-purple-700 rounded hover:bg-purple-700 hover:text-white hover:shadow-xl transition duration-150 ease-in-out py-4 mt-4';
+      ? 'text-blue-400 bg-white rounded opacity-75 hover:opacity-100 hover:shadow-xl transition duration-150 ease-in-out py-4 mt-4'
+      : 'text-blue-400 border border-blue-400 rounded hover:bg-blue-400 hover:text-white hover:shadow-xl transition duration-150 ease-in-out py-4 mt-4';
   };
 
   const divStyle = () => {
     return subscription.name === 'Standard'
-      ? 'md:w-1/3 text-white bg-purple-700 rounded-lg shadow hover:shadow-xl transition duration-100 ease-in-out p-6 md:mr-4 mb-10 md:mb-0'
+      ? 'md:w-1/3 text-white bg-blue-400 rounded-lg shadow hover:shadow-xl transition duration-100 ease-in-out p-6 md:mr-4 mb-10 md:mb-0'
       : 'md:w-1/3 bg-white rounded-lg shadow hover:shadow-xl transition duration-100 ease-in-out p-6 md:mr-4 mb-10 md:mb-0';
   };
 
