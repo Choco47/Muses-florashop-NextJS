@@ -1,5 +1,24 @@
 import bcrypt from 'bcryptjs';
 const data = {
+  //-------------subs----------------------
+  subscriptions: [
+    {
+      slug: 'basic-plan',
+      name: 'Basic',
+      price: '200',
+    },
+    {
+      slug: 'standard-plan',
+      name: 'Standard',
+      price: '300',
+    },
+    {
+      slug: 'premium-plan',
+      name: 'Premium',
+      price: '400',
+    },
+  ],
+  //-------------users----------------------
   users: [
     {
       name: 'John',
@@ -14,7 +33,7 @@ const data = {
       isAdmin: false,
     },
   ],
-
+  //-------------products----------------------
   products: [
     {
       name: 'Blue Rose Bouquet',

@@ -6,6 +6,8 @@ import Product from '../models/Product';
 import db from '../utils/db';
 import { Store } from '../utils/Store';
 import { toast } from 'react-hot-toast';
+import data from '../utils/data';
+import SubscriptionItem from '../components/SubscriptionItem';
 
 export default function Home({ products }) {
   const { state, dispatch } = useContext(Store);
@@ -29,6 +31,21 @@ export default function Home({ products }) {
   return (
     //for small screen then item will shows less
     <Layout title="Home Page">
+      <div className="text-center my-10">
+        <h1 className="font-bold text-3xl mb-2">Subscription Plan</h1>
+        <h4 className="text-gray-600">Your plant oasis awaits</h4>
+      </div>
+
+      <div className="flex flex-col md:flex-row px-2 md:px-0">
+        {data.subscriptions.map((subscription) => (
+          <SubscriptionItem
+            subscription={subscription}
+            key={subscription.slug}
+          ></SubscriptionItem>
+        ))}
+      </div>
+      <br />
+      <br />
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
         {products.map((product) => (
           <ProductItem
