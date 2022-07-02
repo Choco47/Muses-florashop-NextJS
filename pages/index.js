@@ -35,7 +35,6 @@ export default function Home({ products }) {
         <h1 className="font-bold text-3xl mb-2">Subscription Plan</h1>
         <h4 className="text-gray-600">Your plant oasis awaits</h4>
       </div>
-
       <div className="flex flex-col md:flex-row px-2 md:px-0">
         {data.subscriptions.map((subscription) => (
           <SubscriptionItem
