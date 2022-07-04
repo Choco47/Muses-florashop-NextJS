@@ -1,10 +1,11 @@
-import Link from 'next/link';
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
+import Link from 'next/link';
 import { CheckCircleIcon } from '@heroicons/react/outline';
 
-export default function SubscriptionItem({ subscription }) {
+export default function SubscriptionItem({ product, addToCartHandler }) {
   const dynamicDescription = () => {
-    if (subscription.name === 'Basic') {
+    if (product.name === 'Basic') {
       return (
         <div className="text-sm text-gray-600 mt-4">
           <p className="my-2">
@@ -25,7 +26,7 @@ export default function SubscriptionItem({ subscription }) {
           </p>
         </div>
       );
-    } else if (subscription.name === 'Standard') {
+    } else if (product.name === 'Standard') {
       return (
         <div className="text-sm mt-4">
           <p className="my-2">
@@ -47,7 +48,7 @@ export default function SubscriptionItem({ subscription }) {
           </p>
         </div>
       );
-    } else if (subscription.name === 'Premium') {
+    } else if (product.name === 'Premium') {
       return (
         <div className="text-sm text-gray-600 mt-4">
           <p className="my-2">
@@ -69,49 +70,51 @@ export default function SubscriptionItem({ subscription }) {
           </p>
         </div>
       );
+    } else {
+      return null;
     }
   };
-
   const buttonStyle = () => {
-    return subscription.name === 'Standard'
-      ? 'text-blue-400 bg-white rounded opacity-75 hover:opacity-100 hover:shadow-xl transition duration-150 ease-in-out py-4 mt-4'
-      : 'text-blue-400 border border-blue-400 rounded hover:bg-blue-400 hover:text-white hover:shadow-xl transition duration-150 ease-in-out py-4 mt-4';
+    return product.name === 'Standard'
+      ? 'text-blue-400 bg-white rounded opacity-75 hover:opacity-100 hover:shadow-xl transition duration-150 ease-in-out py-4 mt-5'
+      : 'text-blue-400 border border-blue-400 rounded hover:bg-blue-400 hover:text-white hover:shadow-xl transition duration-150 ease-in-out py-4 mt-5';
   };
 
   const divStyle = () => {
-    return subscription.name === 'Standard'
+    return product.name === 'Standard'
       ? 'md:w-1/3 text-white bg-blue-400 rounded-lg shadow hover:shadow-xl transition duration-100 ease-in-out p-6 md:mr-4 mb-10 md:mb-0'
       : 'md:w-1/3 bg-white rounded-lg shadow hover:shadow-xl transition duration-100 ease-in-out p-6 md:mr-4 mb-10 md:mb-0';
   };
 
   const h3Style = () => {
-    return subscription.name === 'Standard'
-      ? 'text-lg'
-      : 'text-gray-600 text-lg';
+    return product.name === 'Standard' ? 'text-lg' : 'text-gray-600 text-lg';
   };
 
   const priceStyle = () => {
-    return subscription.name === 'Standard'
+    return product.name === 'Standard'
       ? 'font-bold text-4xl'
       : 'font-bold text-black text-4xl';
   };
 
   return (
     <div className={`w-full ${divStyle()}`}>
-      <Link href={`/subscription/${subscription.slug}`}>
-        <h3 className={`${h3Style()}`}>{subscription.name}</h3>
+      <Link href={`/product/${product.slug}`}>
+        <h3 className={`${h3Style()}`}>{product.name}</h3>
       </Link>
       <p className={`${h3Style()}`}>
-        <span className={`${priceStyle()}`}>${subscription.price}</span> /Month
+        <span className={`${priceStyle()}`}>${product.price}</span> /Month
       </p>
-
-      {dynamicDescription()}
-
-      <button className={`w-full ${buttonStyle()}`} type="button">
-        Choose Plan
+      <p className="text-sm text-white-600 mt-2">
+        Monthly subscription is include:
+      </p>
+      <div className={`${h3Style()}`}>{dynamicDescription()}</div>
+      <button
+        className={`w-full ${buttonStyle()}`}
+        type="button"
+        onClick={() => addToCartHandler(product)}
+      >
+        Add to Cart
       </button>
     </div>
   );
 }
-
-//8

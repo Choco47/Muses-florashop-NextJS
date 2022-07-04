@@ -6,7 +6,6 @@ import Product from '../models/Product';
 import db from '../utils/db';
 import { Store } from '../utils/Store';
 import { toast } from 'react-hot-toast';
-import data from '../utils/data';
 import SubscriptionItem from '../components/SubscriptionItem';
 
 export default function Home({ products }) {
@@ -35,13 +34,18 @@ export default function Home({ products }) {
         <h1 className="font-bold text-3xl mb-2">Subscription Plan</h1>
         <h4 className="text-gray-600">Your plant oasis awaits</h4>
       </div>
-      <div className="flex flex-col md:flex-row px-2 md:px-0">
-        {data.subscriptions.map((subscription) => (
-          <SubscriptionItem
-            subscription={subscription}
-            key={subscription.slug}
-          ></SubscriptionItem>
-        ))}
+      <div>
+        <div className="flex flex-col md:flex-row px-2 md:px-0">
+          {products
+            .filter((product) => product.category === 'subscription')
+            .map((product) => (
+              <SubscriptionItem
+                product={product}
+                key={product.slug}
+                addToCartHandler={addToCartHandler}
+              ></SubscriptionItem>
+            ))}
+        </div>
       </div>
       <br />
       <br />
