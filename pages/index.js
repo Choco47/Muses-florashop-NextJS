@@ -7,6 +7,7 @@ import db from '../utils/db';
 import { Store } from '../utils/Store';
 import { toast } from 'react-hot-toast';
 import SubscriptionItem from '../components/SubscriptionItem';
+import AboutCard from '../components/AboutCard';
 
 export default function Home({ products }) {
   const { state, dispatch } = useContext(Store);
@@ -30,6 +31,7 @@ export default function Home({ products }) {
   return (
     //for small screen then item will shows less
     <Layout title="Home Page">
+      <AboutCard />
       <div className="text-center my-10">
         <h1 className="font-bold text-3xl mb-2">Subscription Plan</h1>
         <h4 className="text-gray-600">Your plant oasis awaits</h4>

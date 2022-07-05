@@ -48,7 +48,7 @@ const data = {
         'A bouquet collection of royal blue, white or ivory foam roses',
     },
     {
-      name: 'Brides Purple & Ivory Rose',
+      name: 'Purple & Ivory Rose',
       slug: 'purple-ivory-bouquet',
       category: 'bouquet',
       image: '/image/Purple-Ivory-Rose.jpg',
@@ -60,7 +60,7 @@ const data = {
         'A bouquet collection of royal blue, white or ivory foam roses',
     },
     {
-      name: 'Colorful Collection Bouquet',
+      name: 'Colorful Bouquet',
       slug: 'colorful-bouquet',
       category: 'bouquet',
       image: '/image/color.jpg',

@@ -6,6 +6,9 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Menu } from '@headlessui/react';
 import DropdownLink from './DropdownLink';
 import Cookies from 'js-cookie';
+import { ShoppingCartIcon } from '@heroicons/react/outline';
+import { UserCircleIcon } from '@heroicons/react/outline';
+
 export default function Layout({ title, children }) {
   //status shows loading of session
   const { status, data: session } = useSession();
@@ -38,12 +41,15 @@ export default function Layout({ title, children }) {
             <Link href="/">
               <a className="text-lg font-bold">Muses</a>
             </Link>
+
             <div>
+              <a>About</a>
               <Link href="/cart">
                 <a className="p-2">
+                  <ShoppingCartIcon className="h-6 w-8 inline-block" />
                   Cart
                   {cartItemsCount > 0 && (
-                    <span className="ml-1 rounded-full bg-red-500 px-2 py-1 text-xs font-bold text-white">
+                    <span className="ml-1 rounded-full bg-purple-700 px-2 py-1 text-xs font-bold text-white">
                       {cartItemsCount}
                     </span>
                   )}
@@ -54,7 +60,8 @@ export default function Layout({ title, children }) {
                 'Loading'
               ) : session?.user ? (
                 <Menu as="div" className="relative inline-block">
-                  <Menu.Button className="text-orange-600 ">
+                  <Menu.Button className=" text-base font-bold">
+                    <UserCircleIcon className="h-6 w-8 inline-block" />{' '}
                     {session.user.name}
                   </Menu.Button>
                   <Menu.Items className="absolute right-0 w-56 origin-top-right bg-white shadow-lg">
@@ -100,9 +107,50 @@ export default function Layout({ title, children }) {
             </div>
           </nav>
         </header>
-        <main className="container m-auto mt-4 px-4">{children}</main>
-        <footer className="flex h-10 justify-center items-center shadow-inner">
-          <p>Copyright © 2022 Group 1</p>
+        <main className="container m-auto mt-50 px-4">{children}</main>
+
+        <footer className="flex justify-center px-4 text-gray-800 bg-white dark:text-white dark:bg-gray-800">
+          <div className="container py-6">
+            <hr className="h-px mt-6 border-gray-300 dark:bg-gray-700" />
+            <div className="flex flex-col items-center justify-between mt-6 md:flex-row">
+              <div>
+                <Link href="/">
+                  <a className="text-xl font-bold text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
+                    Muses
+                  </a>
+                </Link>
+              </div>
+
+              <div className="flex mt-4 md:m-0">
+                <div className="-mx-4">
+                  <a
+                    href="#"
+                    className="px-4 text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 hover:underline"
+                  >
+                    About
+                  </a>
+                  <a
+                    href="#"
+                    className="px-4 text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 hover:underline"
+                  >
+                    Blog
+                  </a>
+                  <a
+                    href="#"
+                    className="px-4 text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 hover:underline"
+                  >
+                    News
+                  </a>
+                  <a
+                    href="#"
+                    className="px-4 text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 hover:underline"
+                  >
+                    Contact
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </footer>
       </div>
     </>
