@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
-import Link from 'next/link';
 import { CheckCircleIcon } from '@heroicons/react/outline';
 
 export default function SubscriptionItem({ product, addToCartHandler }) {
@@ -98,9 +97,7 @@ export default function SubscriptionItem({ product, addToCartHandler }) {
 
   return (
     <div className={`w-full ${divStyle()}`}>
-      <Link href={`/product/${product.slug}`}>
-        <h3 className={`${h3Style()}`}>{product.name}</h3>
-      </Link>
+      <h3 className={`${h3Style()}`}>{product.name}</h3>
       <p className={`${h3Style()}`}>
         <span className={`${priceStyle()}`}>${product.price}</span> /Month
       </p>

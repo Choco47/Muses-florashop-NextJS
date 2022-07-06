@@ -43,7 +43,7 @@ export default function Layout({ title, children }) {
             </Link>
 
             <div>
-              <Link href="/About">
+              <Link href="/about">
                 <a className="text-black font-normal">About</a>
               </Link>
               <Link href="/cart">

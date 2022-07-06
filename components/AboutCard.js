@@ -1,32 +1,33 @@
-/* eslint-disable @next/next/no-img-element */
 import React from 'react';
-export default function AboutCard() {
-  return (
-    <div className="container px-6 py-10 mx-automt-4">
-      <div className="items-center lg:flex ">
-        <div className="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2">
-          <img
-            className="w-full h-full lg:max-w-xl"
-            src="https://shinsenhanaya.com/wp/wp-content/themes/hanayoshi-theme/cmn/img/about/pic_01.jpg?v=202010130129"
-            alt="Catalogue-pana.svg"
-          />
-        </div>
 
-        <div className="w-full lg:w-1/2 ">
-          <div className="lg:max-w-lg ">
-            <h1 className="text-2xl font-bold text-gray-800 uppercase dark:text-white lg:text-3xl">
-              Muses Florashop
-            </h1>
-            <p className="mt-2 text-gray-600 dark:text-gray-400">
-              Online flower shop, our goal is to share news about floral,
-              bouquet, gift and more.
-            </p>
-            <button className="w-full px-5 py-3 mt-6 text-xs mr-4 font-medium text-white transition-colors duration-200 transform bg-blue-400 rounded-md lg:w-auto hover:bg-blue-400 focus:outline-none focus:bg-blue-500">
-              SHOP NOW
-            </button>
-            <button className="w-full px-3 py-3 mt-6 text-xs font-medium text-black transition-colors duration-200 transform bg-white-600 rounded-md lg:w-auto hover:bg-white-500 focus:outline-none focus:bg-grey-500 shadow-md">
-              LEARN MORE
-            </button>
+export default function Aboutcard() {
+  return (
+    <div className="bg-gray-50">
+      <div className="mt-8 max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+        <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          <span className="block">Ready to dive in?</span>
+          <span className="block text-indigo-600">
+            Start your free trial today.
+          </span>
+        </h2>
+        <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+          <div className="inline-flex rounded-md shadow">
+            <a
+              href="#"
+              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
+            >
+              {' '}
+              Get started{' '}
+            </a>
+          </div>
+          <div className="ml-3 inline-flex rounded-md shadow">
+            <a
+              href="#"
+              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50"
+            >
+              {' '}
+              Learn more{' '}
+            </a>
           </div>
         </div>
       </div>
