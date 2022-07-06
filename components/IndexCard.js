@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from 'next/link';
 import React from 'react';
 export default function IndexCard() {
   return (
@@ -21,12 +22,16 @@ export default function IndexCard() {
               Online flower shop, our goal is to share news about floral,
               bouquet, gift and more.
             </p>
-            <button className="w-full px-5 py-3 mt-6 text-xs mr-4 font-medium text-white transition-colors duration-200 transform bg-blue-400 rounded-md lg:w-auto hover:bg-blue-400 focus:outline-none focus:bg-blue-500">
-              SHOP NOW
-            </button>
-            <button className="w-full px-3 py-3 mt-6 text-xs font-medium text-black transition-colors duration-200 transform bg-white-600 rounded-md lg:w-auto hover:bg-white-500 focus:outline-none focus:bg-grey-500 shadow-md">
-              LEARN MORE
-            </button>
+            <Link href="/">
+              <button className="w-full px-5 py-3 mt-6 text-xs mr-4 font-medium text-white transition-colors duration-200 transform bg-blue-400 rounded-md lg:w-auto hover:bg-blue-400 focus:outline-none focus:bg-blue-500">
+                SHOP NOW
+              </button>
+            </Link>
+            <Link href="/about">
+              <button className="w-full px-3 py-3 mt-6 text-xs font-medium text-black transition-colors duration-200 transform bg-white-600 rounded-md lg:w-auto hover:bg-white-500 focus:outline-none focus:bg-grey-500 shadow-md">
+                LEARN MORE
+              </button>
+            </Link>
           </div>
         </div>
       </div>

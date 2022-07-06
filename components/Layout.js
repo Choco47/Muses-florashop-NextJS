@@ -44,10 +44,12 @@ export default function Layout({ title, children }) {
 
             <div>
               <Link href="/about">
-                <a className="text-black font-normal">About</a>
+                <a className="px-4 text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 hover:underline">
+                  About
+                </a>
               </Link>
               <Link href="/cart">
-                <a className="p-2">
+                <a className="px-4 text-sm font-medium text-blue-500 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 hover:underline">
                   <ShoppingCartIcon className="h-6 w-8 inline-block" />
                   Cart
                   {cartItemsCount > 0 && (
@@ -125,18 +127,16 @@ export default function Layout({ title, children }) {
 
               <div className="flex mt-4 md:m-0">
                 <div className="-mx-4">
-                  <a
-                    href="#"
-                    className="px-4 text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 hover:underline"
-                  >
-                    About
-                  </a>
-                  <a
-                    href="#"
-                    className="px-4 text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 hover:underline"
-                  >
-                    Blog
-                  </a>
+                  <Link href="/about">
+                    <a className="px-4 text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 hover:underline">
+                      About
+                    </a>
+                  </Link>
+                  <Link href="/cart">
+                    <a className="px-4 text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 hover:underline">
+                      Cart
+                    </a>
+                  </Link>
                   <a
                     href="#"
                     className="px-4 text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 hover:underline"

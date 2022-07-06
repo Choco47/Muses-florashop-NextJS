@@ -53,7 +53,7 @@ export default function Home({ products }) {
       <br />
       <div className="text-center my-10">
         <h1 className="font-bold text-3xl mb-2">Product</h1>
-        <h4 className="text-gray-600">Your plant oasis awaits</h4>
+        <h4 className="text-gray-600">Free Shipping on Order Over $400</h4>
       </div>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
         {products.map((product) => (
