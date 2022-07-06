@@ -75,6 +75,11 @@ export default function Layout({ title, children }) {
                       </DropdownLink>
                     </Menu.Item>
                     <Menu.Item>
+                      <DropdownLink className="dropdown-link" href="/luckydraw">
+                        Lucky Draw
+                      </DropdownLink>
+                    </Menu.Item>
+                    <Menu.Item>
                       <DropdownLink
                         className="dropdown-link"
                         href="/order-history"

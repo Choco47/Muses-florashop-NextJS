@@ -26,7 +26,8 @@
     "react-chartjs-2": "^4.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.33.0",
-    "react-hot-toast": "^2.2.0"
+    "react-hot-toast": "^2.2.0",
+    "react-wheel-of-prizes": "^1.0.9"
   },
   "devDependencies": {
     "@types/react": "^18.0.14",
