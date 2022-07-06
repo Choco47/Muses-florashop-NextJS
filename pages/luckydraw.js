@@ -8,7 +8,7 @@ export default function LuckyDrawScreen() {
     <Layout title="LucyDraw">
       <div className="py-3">
         <LuckyDrawcard />
-        <div className="py-3">
+        <div className="py-3 ">
           <LuckyDraw />
         </div>
       </div>

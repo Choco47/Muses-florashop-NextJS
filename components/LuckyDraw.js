@@ -25,7 +25,7 @@ export default function LuckyDraw() {
   ];
   const onFinished = (winner) => {
     if (winner === 'Speaial Discount 10% OFF') {
-      return toast.success('Enjoy 10% Off.\n\nHave fun.');
+      return toast.success('Won Enjoy 10% Off. Have fun.');
     } else {
       return null;
     }
@@ -40,7 +40,7 @@ export default function LuckyDraw() {
       contrastColor="white"
       buttonText="Spin"
       //isOnlyOnce={false}
-      size={210}
+      size={290}
       upDuration={500}
       downDuration={100}
     />
