@@ -56,13 +56,15 @@ export default function Home({ products }) {
         <h4 className="text-gray-600">Free Shipping on Order Over $400</h4>
       </div>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
-        {products.map((product) => (
-          <ProductItem
-            product={product}
-            key={product.slug}
-            addToCartHandler={addToCartHandler}
-          ></ProductItem>
-        ))}
+        {products
+          .filter((product) => product.category !== 'subscription')
+          .map((product) => (
+            <ProductItem
+              product={product}
+              key={product.slug}
+              addToCartHandler={addToCartHandler}
+            ></ProductItem>
+          ))}
       </div>
     </Layout>
   );
