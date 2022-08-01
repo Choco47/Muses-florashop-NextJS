@@ -13,7 +13,6 @@ Reference location of destination.
 - [Description](#Description)
 - [Aims](#Aims)
 - [How To Use](#how-to-use)
-- [Group members](#Group-members)
 
 ## Description
 
@@ -40,9 +39,11 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Deployment:
+https://muses-florashop-fyp.vercel.app/
 
-## Group members
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 Group 1 Final Year Project
 
