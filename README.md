@@ -46,19 +46,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 Group 1 Final Year Project
 
-Chu Kwai Luen, Kelvin
-7424942
-
-LAM Yuk Shan
-7407804
-
-LUK Iman
-7415473
-
-Taabraiz-Akhtar
-7421345
-
-SAJJAD
-7413981
-
 [Back To The Top](#Project Name)
