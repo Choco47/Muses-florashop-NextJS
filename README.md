@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Project Name
 
-Membership Management System with Floral Shop Interface Project
+Membership Management System with Floral Shop Project
 
 > Company Name: Muses Florashop
 
